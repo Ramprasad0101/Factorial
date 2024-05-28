@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+  <div id="ip2">
+      <input type="number" id="inputNumber" placeholder="Enter a number">
+      <button id="ip1">ENTE NUMBER GET FACTORIAL</button>
+    </div>
+
+  <script>
+    let getip1 = document.getElementById("ip1");
+    getip1.style.backgroundColor = "pink";
+    getip1.style.fontSize = "20px";
+    getip1.style.marginLeft = "100px";
+    getip1.style.marginTop = "20px";
+    getip1.style.borderRadius = "5px";
+
+    let getip2 = document.getElementById("ip2");
+    getip2.style.width = "500px";
+    getip2.style.height = "600px";
+    getip2.style.marginTop = "10px";
+    getip2.style.border = "2px solid";
+    getip2.style.marginLeft = "550px";
+    getip2.style.borderRadius = "10px";
+    getip2.style.backgroundColor = "yellow"
+
+
+
+
+    let getinputNumber = document.getElementById("inputNumber");
+    getinputNumber.style.width = "200px";
+    getinputNumber.style.height = "50px";
+    getinputNumber.style.marginTop = "200px";
+    getinputNumber.style.border = "2px solid";
+    getinputNumber.style.marginLeft = "150px";
+    getinputNumber.style.borderRadius = "20px";
+
+
+
+
+
+    getip1.addEventListener("click", function() {
+      let inputNumber = document.getElementById("inputNumber").value;
+      let result = calculateFactorial(inputNumber);
+      document.getElementById("ip2").innerText = "Factorial: " + result;
+    });
+
+    function calculateFactorial(num) {
+      num = parseInt(num);
+      if (isNaN(num)) {
+        return "Invalid input";
+      }
+      let factorial = 1;
+      for (let i = 1; i <= num; i++) {
+        factorial *= i;
+      }
+      return factorial;
+    }
+  </script>
+</body>
+</html>
